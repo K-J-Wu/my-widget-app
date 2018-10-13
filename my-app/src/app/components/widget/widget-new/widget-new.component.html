@@ -1,0 +1,29 @@
+<div>
+	<div>
+		<label>Name: </label>
+		<input [(ngModel)]="widget.name" />
+	</div>
+
+	<div>
+		<label>Description: </label>
+		<input [(ngModel)]="widget.description" />
+	</div>
+
+	<div>
+		<label>Color: </label>
+		<input [(ngModel)]="widget.color" />
+	</div>
+
+	<div>
+		<label>Size: </label>
+    <app-size [(size)]="widget.size_id"></app-size>
+	</div>
+
+	<div>
+		<label>Machine: </label>
+		<app-machine [(machine)]="widget.machine_id"></app-machine>
+	</div>
+
+	<button (click)="add()">Add</button>
+</div>
+<router-outlet></router-outlet>

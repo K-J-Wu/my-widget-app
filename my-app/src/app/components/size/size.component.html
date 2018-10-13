@@ -1,0 +1,5 @@
+<select [(ngModel)]="size" (ngModelChange)="onChange()">
+  <option *ngFor="let size of sizes" [ngValue]="size.id">
+      <span>{{size.title}}</span>
+  </option>
+</select>

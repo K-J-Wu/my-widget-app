@@ -1,0 +1,22 @@
+<h2>My Widgets</h2>
+<input [(ngModel)]="searchText" placeholder="Filter By Color" />
+<table>
+  <thead>
+    <th>Name</th>
+    <th class="clickable" (click)="currentFlag = !currentFlag">Color</th>
+    <th>Delete</th>
+  </thead>
+  <tbody>
+    <tr class="widget" *ngFor="let widget of (widgets | filter: searchText | sortBy: 'color': currentFlag)" >
+      <td class="clickable" routerLink="/widgets/{{widget.id}}">
+        {{widget.name}}
+      </td>
+      <td>
+        {{widget.color}}
+      </td>
+      <td><button (click)="deleteWidget(widget.id)"> Delete </button></td>
+    </tr>
+  </tbody>
+</table>
+<button><a routerLink="/widgets/new">Create New Widget</a></button>
+<router-outlet></router-outlet>

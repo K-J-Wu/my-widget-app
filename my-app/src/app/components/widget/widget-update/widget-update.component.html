@@ -1,0 +1,22 @@
+<div *ngIf="widget">
+	<h2>{{widget.name | uppercase}} Details</h2>
+	<div><span>id: </span>{{widget.id}}</div>
+	<div>
+		<div>name:
+			<input [(ngModel)]="widget.name" placeholder="name"/>
+		</div>
+		<div>description:
+			<input [(ngModel)]="widget.description" placeholder="description"/>
+		</div>
+		<div>color:
+			<input [(ngModel)]="widget.color" placeholder="color"/>
+		</div>
+		<div>size id:
+			<app-size [(size)]="widget.size.id"></app-size>
+		</div>
+		<div>machine:
+			<app-machine [(machine)]="widget.machine.id"></app-machine>
+		</div>
+	</div>
+	<button (click)="update()">Update</button>
+</div>

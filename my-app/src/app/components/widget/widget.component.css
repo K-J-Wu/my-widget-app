@@ -1,0 +1,12 @@
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+border: 1px solid lightgrey;
+}
+
+.clickable:hover {
+  cursor: pointer;
+  color: #3571bc;
+}

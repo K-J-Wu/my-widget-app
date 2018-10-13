@@ -1,0 +1,24 @@
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+ul {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+h1 {
+	justify-content: flex-start;
+}
+
+li {
+	list-style: none;
+	font-size: 1.5rem;
+	padding: 0 5px;
+	line-height: 75px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}

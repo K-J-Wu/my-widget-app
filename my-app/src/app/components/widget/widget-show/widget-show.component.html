@@ -1,0 +1,15 @@
+<div *ngIf="widget">
+	<h2>{{widget.name | uppercase}} Details</h2>
+	<div><span>id: </span>{{widget.id}}</div>
+	<ul>
+		<li>Name: {{widget.name}}</li>
+		<li>Description: {{widget.description}}</li>
+		<li>Color: {{widget.color}}</li>
+		<li>Size: {{widget.size.title}}</li>
+		<li>Machine: {{widget.machine.title}}</li>
+		<li>Created At: {{widget.created_at}}</li>
+		<li>Updated At: {{widget.updated_at}}</li>
+		<li>Url: {{widget.url}}</li>
+	</ul>
+	<button routerLink="/widgets/{{widget.id}}/edit">Edit</button>
+</div>

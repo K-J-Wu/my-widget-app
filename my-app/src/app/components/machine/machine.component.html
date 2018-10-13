@@ -1,0 +1,6 @@
+<select [(ngModel)]="machine" (ngModelChange)="onChange()">
+  <option *ngFor="let machine of machines" [ngValue]="machine.id">
+      <span>{{machine.title}}</span>
+  </option>
+</select>
+
